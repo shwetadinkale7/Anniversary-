@@ -1,16 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anniversary</title>
+    <title>Anniversary Surprise</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 { color: #d63384; font-size: 22px; text-align: center; }
+
+        .instruction { font-size: 12px; color: #888; margin-bottom: 20px; }
+
+        /* The Box Container */
+        .box {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        /* The Secret Checkbox */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* The Gift Label (The clickable part) */
+        .gift-label {
+            display: block;
+            background: #ffc8dd;
+            padding: 30px;
+            border-radius: 15px;
+            border: 3px solid #ffafcc;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .gift-icon { font-size: 40px; }
+        .tap-hint { font-size: 10px; font-weight: bold; color: white; display: block; margin-top: 5px; }
+
+        /* The Message (Hidden by default) */
+        .content {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #ffafcc;
+            text-align: center;
+        }
+
+        /* MAGIC: When checkbox is checked, hide gift and show content */
+        input[type="checkbox"]:checked ~ .gift-label {
+            display: none;
+        }
+        input[type="checkbox"]:checked ~ .content {
+            display: block;
+        }
+
+        .animal { font-size: 35px; margin-bottom: 10px; }
+        .msg { font-size: 14px; color: #444; font-weight: bold; line-height: 1.5; }
+        
+        .footer { margin-top: 30px; color: #d63384; font-weight: bold; }
+    </style>
 </head>
 <body>
-    <h1>Happy Anniversary!</h1>
-    <img src="https://raw.githubusercontent.com/shwetadinkale7/Anniversary-/main/image1.jpg" alt="Image 1">
-    <img src="https://raw.githubusercontent.com/shwetadinkale7/Anniversary-/main/image2.jpg" alt="Image 2">
-    <img src="https://raw.githubusercontent.com/shwetadinkale7/Anniversary-/main/image3.jpg" alt="Image 3">
-    <img src="https://raw.githubusercontent.com/shwetadinkale7/Anniversary-/main/image4.jpg" alt="Image 4">
-    <img src="https://raw.githubusercontent.com/shwetadinkale7/Anniversary-/main/image5.jpg" alt="Image 5">
+
+    <h1>Happy 1st Anniversary! ❤️</h1>
+    <p class="instruction">Tap the pink boxes to find your gifts...</p>
+
+    <div class="box">
+        <input type="checkbox" id="gift1">
+        <label for="gift1" class="gift-label">
+            <span class="gift-icon">🎁</span>
+            <span class="tap-hint">TAP TO OPEN</span>
+        </label>
+        <div class="content">
+            <div class="animal">🧸</div>
+            <div class="msg">A warm teddy hug for the most amazing boy! You make every day feel like a warm embrace.</div>
+        </div>
+    </div>
+
+    <div class="box">
+        <input type="checkbox" id="gift2">
+        <label for="gift2" class="gift-label" style="background:#cdb4db; border-color:#b392ac;">
+            <span class="gift-icon">🎁</span>
+            <span class="tap-hint">TAP TO OPEN</span>
+        </label>
+        <div class="content">
+            <div class="animal">🪻</div>
+            <div class="msg">Rare purple flowers for a rare soul. Being with you is like finding a hidden treasure in a field of ordinary.</div>
+        </div>
+    </div>
+
+    <div class="box">
+        <input type="checkbox" id="gift3">
+        <label for="gift3" class="gift-label" style="background:#bde0fe; border-color:#a2cffe;">
+            <span class="gift-icon">🎁</span>
+            <span class="tap-hint">TAP TO OPEN</span>
+        </label>
+        <div class="content">
+            <div class="animal">🐘</div>
+            <div class="msg">I remember every single second we have spent together! Our memories are the most valuable things I own.</div>
+        </div>
+    </div>
+
+    <div class="box">
+        <input type="checkbox" id="gift4">
+        <label for="gift4" class="gift-label" style="background:#fcf6bd; border-color:#e9d758;">
+            <span class="gift-icon">🎁</span>
+            <span class="tap-hint">TAP TO OPEN</span>
+        </label>
+        <div class="content">
+            <div class="animal">🌻</div>
+            <div class="msg">You are the sunshine that makes my life bloom. Even on rainy days, you are my light.</div>
+        </div>
+    </div>
+
+    <div class="box">
+        <input type="checkbox" id="gift5">
+        <label for="gift5" class="gift-label" style="background:#d0f4de; border-color:#a9dfbf;">
+            <span class="gift-icon">🎁</span>
+            <span class="tap-hint">TAP TO OPEN</span>
+        </label>
+        <div class="content">
+            <div class="animal">🐙</div>
+            <div class="msg">I wish I had 8 arms just to hold you and never let you go! One set of arms just isn't enough to show you how much I care.</div>
+        </div>
+    </div>
+
+    <div class="box">
+        <input type="checkbox" id="gift6">
+        <label for="gift6" class="gift-label" style="background:#ffafcc; border-color:#ff85a1;">
+            <span class="gift-icon">🎁</span>
+            <span class="tap-hint">TAP TO OPEN</span>
+        </label>
+        <div class="content">
+            <div class="animal">💖</div>
+            <div class="msg">365 days of "Us" and I want 100 more years! This is just the first chapter of our incredible story.</div>
+        </div>
+    </div>
+
+    <div class="footer">I love you forever! 💍 ✨</div>
+
 </body>
 </html>
